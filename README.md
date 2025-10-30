@@ -19,6 +19,7 @@ Dane pochodzą z: [Bitcoin Historical Data — Kaggle](https://www.kaggle.com/da
 
 
 ## Struktura katalogów
+````
 ai_project_crypto_predictors/
 ├── docs/
 │   └── architecture_diagram.png
@@ -33,6 +34,7 @@ ai_project_crypto_predictors/
 ├── requirements.txt
 ├── LICENSE
 └── README.md
+````
 
 
 ---
