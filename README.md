@@ -72,7 +72,7 @@ ai_project_crypto_predictors/
 ## Linki projektu
 
 - Repozytorium GitHub: [GitHub Repo](https://github.com/PJATK-ASI-2024/ai_project_crypto_predictors)
-- GitHub Project Board: [GitHub Project](https://github.com/users/Mikku0/projects/1)
+- GitHub Project Board: [GitHub Project](https://github.com/orgs/PJATK-ASI-2024/projects/204)
 - Dokumentacja / diagram architektury: [architecture_diagram.png](docs/architecture_diagram.png)
 
 ---
