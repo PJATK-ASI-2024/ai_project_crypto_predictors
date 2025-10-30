@@ -71,9 +71,9 @@ ai_project_crypto_predictors/
 
 ## Linki projektu
 
-- Repozytorium GitHub: https://github.com/Mikku0/ai_project_crypto_predictors 
-- GitHub Project Board: [link tutaj]  
-- Dokumentacja / diagram architektury: [link tutaj]  
+- Repozytorium GitHub: [GitHub Repo](https://github.com/Mikku0/ai_project_crypto_predictors)
+- GitHub Project Board: [GitHub Project](https://github.com/users/Mikku0/projects/1)
+- Dokumentacja / diagram architektury: [architecture_diagram.png](docs/architecture_diagram.png)
 
 ---
 
