@@ -23,10 +23,6 @@ outputs/
 *.ipynb_checkpoints/
 notebooks/.ipynb_checkpoints/
 
-conf/local/
-conf/base/catalog.yml
-conf/base/credentials.yml
-conf/local/*.yml
 
 .ipynb_checkpoints/
 .jupyter/

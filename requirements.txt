@@ -1,4 +1,5 @@
 kedro>=1.0.0
+kedro-datasets[pandas]
 pandas>=2.0.0
 numpy>=1.25.0
 scipy>=1.10.0

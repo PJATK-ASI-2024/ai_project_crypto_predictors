@@ -1,5 +1,7 @@
 # 🧠 Raport EDA — Analiza danych BTC
 
+- `docs/close_trend.png` [close_trend.png] (docs/close_trend.png)
+
 ## 1. Opis danych
 
 Dane pochodzą z pliku `btc-price-history.zip` i zawierają historyczne notowania Bitcoina.  
@@ -65,11 +67,10 @@ Po wczytaniu danych i konwersji kolumny `Timestamp` do formatu daty, możliwa by
 ---
 
 📊 **Pliki wygenerowane w analizie:**
-- `docs/heatmap_correlation.png`
-- `docs/hist_Close.png`
-- `docs/hist_High.png`
-- `docs/hist_Low.png`
-- `docs/hist_Open.png`
-- `docs/hist_Timestamp.png`
-- `docs/hist_Volume.png`
+- `docs/heatmap_correlation.png` [heatmap_correlation.png] (docs/heatmap_correlation.png)
+- `docs/hist_Close.png` [hist_Close.png] (docs/hist_Close.png)
+- `docs/hist_High.png` [hist_High.png] (docs/hist_High.png)
+- `docs/hist_Low.png` [hist_Low.png] (docs/hist_Low.png)
+- `docs/hist_Open.png` [hist_Open.png] (docs/hist_Open.png)
+- `docs/hist_Volume.png` [hist_Volume.png] (docs/hist_Volume.png)
 
