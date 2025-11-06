@@ -1,6 +1,7 @@
 # 🧠 Raport EDA — Analiza danych BTC
 
-- !Historia ceny Bitcoina [close_trend.png](close_trend.png)
+- **Historia ceny Bitcoina:** 
+   !Historia ceny Bitcoina [close_trend.png](close_trend.png)
 
 ## 1. Opis danych
 
