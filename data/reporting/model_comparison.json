@@ -1,0 +1,6 @@
+{
+  "baseline_rmse": 1.0036453875,
+  "automl_rmse": 0.0004677714,
+  "custom_rmse": 0.0006948928,
+  "best": "baseline"
+}

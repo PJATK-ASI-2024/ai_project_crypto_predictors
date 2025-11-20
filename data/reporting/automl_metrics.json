@@ -1,0 +1,1 @@
+{"LinearRegression":{"rmse":0.0004677715,"mae":0.0001943891,"r2":0.9999997828},"RandomForest":{"rmse":0.0016664014,"mae":0.0010961317,"r2":0.9999972432},"Dummy":{"rmse":1.0036453875,"mae":0.8016739459,"r2":-0.0000078111},"best_model":"LinearRegression"}

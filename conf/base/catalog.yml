@@ -1,22 +1,3 @@
-# Here you can define all your datasets by using simple YAML syntax.
-#
-# Documentation for this file format can be found in "The Data Catalog"
-# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
-
-raw_data:
-  type: pandas.CSVDataset
-  filepath: data\raw\btc-price-history.zip
-  load_args:
-    compression: zip
-
-clean_data:
-  type: pandas.CSVDataset
-  filepath: data/intermediate/clean_data.csv
-
-scaled_data:
-  type: pandas.CSVDataset
-  filepath: data/primary/scaled_data.csv
-
 train_data:
   type: pandas.CSVDataset
   filepath: data/model_input/train.csv
@@ -28,3 +9,32 @@ val_data:
 test_data:
   type: pandas.CSVDataset
   filepath: data/model_input/test.csv
+
+baseline_model:
+  type: pickle.PickleDataset
+  filepath: data/reporting/baseline_model.pkl
+
+automl_model:
+  type: pickle.PickleDataset
+  filepath: data/reporting/automl_model.pkl
+
+custom_model:
+  type: pickle.PickleDataset
+  filepath: data/reporting/custom_model.pkl
+
+baseline_metrics:
+  type: json.JSONDataset
+  filepath: data/reporting/baseline_metrics.json
+
+automl_metrics:
+  type: json.JSONDataset
+  filepath: data/reporting/automl_metrics.json
+
+custom_metrics:
+  type: json.JSONDataset
+  filepath: data/reporting/custom_metrics.json
+
+model_comparison:
+  type: json.JSONDataset
+  filepath: data/reporting/model_comparison.json
+
