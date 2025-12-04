@@ -1,40 +1,44 @@
-train_data:
-  type: pandas.CSVDataset
-  filepath: data/model_input/train.csv
+  clean_data:
+    type: pandas.CSVDataset
+    filepath: data/intermediate/clean_data.csv
 
-val_data:
-  type: pandas.CSVDataset
-  filepath: data/model_input/val.csv
+  train_data:
+    type: pandas.CSVDataset
+    filepath: data/model_input/train.csv
 
-test_data:
-  type: pandas.CSVDataset
-  filepath: data/model_input/test.csv
+  val_data:
+    type: pandas.CSVDataset
+    filepath: data/model_input/val.csv
 
-baseline_model:
-  type: pickle.PickleDataset
-  filepath: data/reporting/baseline_model.pkl
+  test_data:
+    type: pandas.CSVDataset
+    filepath: data/model_input/test.csv
 
-automl_model:
-  type: pickle.PickleDataset
-  filepath: data/reporting/automl_model.pkl
+  baseline_model:
+    type: pickle.PickleDataset
+    filepath: data/reporting/baseline_model.pkl
 
-custom_model:
-  type: pickle.PickleDataset
-  filepath: data/reporting/custom_model.pkl
+  automl_model:
+    type: pickle.PickleDataset
+    filepath: data/reporting/automl_model.pkl
 
-baseline_metrics:
-  type: json.JSONDataset
-  filepath: data/reporting/baseline_metrics.json
+  custom_model:
+    type: pickle.PickleDataset
+    filepath: data/reporting/custom_model.pkl
 
-automl_metrics:
-  type: json.JSONDataset
-  filepath: data/reporting/automl_metrics.json
+  baseline_metrics:
+    type: json.JSONDataset
+    filepath: data/reporting/baseline_metrics.json
 
-custom_metrics:
-  type: json.JSONDataset
-  filepath: data/reporting/custom_metrics.json
+  automl_metrics:
+    type: json.JSONDataset
+    filepath: data/reporting/automl_metrics.json
 
-model_comparison:
-  type: json.JSONDataset
-  filepath: data/reporting/model_comparison.json
+  custom_metrics:
+    type: json.JSONDataset
+    filepath: data/reporting/custom_metrics.json
+
+  model_comparison:
+    type: json.JSONDataset
+    filepath: data/reporting/model_comparison.json
 
