@@ -28,6 +28,9 @@ Plik `dags/kedro_dag.py` definiuje kompleksowy DAG składający się z:
 - **verify_results** (BashOperator) – weryfikacja utworzonych plików i metryk
 - **end_pipeline** (PythonOperator) – logowanie zakończenia wykonania
 
+- **Graph:**  
+  ![airflow_graph.png](airflow_graph.png)
+
 #### Task alternatywny:
 
 - **run_full_pipeline** (BashOperator) – możliwość uruchomienia pełnego pipeline'u w jednym kroku
