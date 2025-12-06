@@ -29,20 +29,18 @@ with DAG(
     dag_id="btc_price_prediction_pipeline",
     default_args=default_args,
     description="Bitcoin price prediction ML pipeline using Kedro",
-    schedule_interval="@weekly",  # Uruchamiaj co tydzień
+    schedule_interval="@weekly",
     catchup=False,
     tags=["kedro", "mlops", "bitcoin", "prediction", "ml"],
-    max_active_runs=1,  # Tylko jedna instancja naraz
+    max_active_runs=1,
 ) as dag:
 
-    # Task startowy - logowanie
     start_pipeline = PythonOperator(
         task_id="start_pipeline",
         python_callable=log_pipeline_start,
         provide_context=True,
     )
 
-    # Task 1: Eksploracyjna Analiza Danych (EDA)
     eda = BashOperator(
         task_id="eda_pipeline",
         bash_command="""
@@ -55,7 +53,6 @@ with DAG(
         dag=dag,
     )
 
-    # Task 2: Preprocessing danych
     preprocessing = BashOperator(
         task_id="preprocessing_pipeline",
         bash_command="""
@@ -69,7 +66,6 @@ with DAG(
         dag=dag,
     )
 
-    # Task 3: Trenowanie modeli
     modeling = BashOperator(
         task_id="modeling_pipeline",
         bash_command="""
@@ -83,7 +79,6 @@ with DAG(
         dag=dag,
     )
 
-    # Task 4: Weryfikacja wyników
     verify_results = BashOperator(
         task_id="verify_results",
         bash_command="""
@@ -91,7 +86,7 @@ with DAG(
         cd /opt/project
         echo "Verifying pipeline results..."
         
-        # Sprawdź czy powstały wymagane pliki
+
         test -f data/reporting/baseline_model.pkl || exit 1
         test -f data/reporting/automl_model.pkl || exit 1
         test -f data/reporting/custom_model.pkl || exit 1
@@ -99,21 +94,19 @@ with DAG(
         
         echo "All required files exist"
         
-        # Wyświetl porównanie modeli
+
         echo "Model comparison results:"
         cat data/reporting/model_comparison.json
         """,
         dag=dag,
     )
 
-    # Task końcowy - logowanie
     end_pipeline = PythonOperator(
         task_id="end_pipeline",
         python_callable=log_pipeline_end,
         provide_context=True,
     )
 
-    # Alternatywny task dla pełnego pipeline'u (wszystkie kroki naraz)
     full_pipeline = BashOperator(
         task_id="run_full_pipeline",
         bash_command="""
@@ -124,13 +117,10 @@ with DAG(
         echo "Full pipeline completed successfully"
         """,
         dag=dag,
-        # Ten task nie będzie wykonywany domyślnie
+
         trigger_rule="none_failed_or_skipped",
     )
 
-    # Definicja zależności
     start_pipeline >> eda >> preprocessing >> modeling >> verify_results >> end_pipeline
     
-    # Alternatywna ścieżka: pełny pipeline w jednym tasku
-    # (można uruchomić manualnie jeśli potrzebne)
     start_pipeline >> full_pipeline >> end_pipeline
