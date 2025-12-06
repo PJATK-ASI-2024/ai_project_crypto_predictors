@@ -33,8 +33,6 @@ notebooks/.ipynb_checkpoints/
 Thumbs.db
 desktop.ini
 
-airflow/
-dags/
 plugins/
 logs/
 
