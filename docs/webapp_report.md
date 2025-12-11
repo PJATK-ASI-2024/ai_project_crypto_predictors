@@ -31,6 +31,7 @@ Poprawna odpowiedź z endpointu głównego:
 ```
 
 - **Zrzut ekranu odpowiedzi:** 
+
   ![Backend_screenshot.png](Backend_screenshot.png)
 
 - **Zrzut ekranu odpowiedzi z /docs:** 
